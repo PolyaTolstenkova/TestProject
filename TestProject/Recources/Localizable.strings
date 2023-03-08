@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  TestProject
+
+  Created by Полина Толстенкова on 08.03.2023.
+  
+*/
+
+// MARK: Profile View
+
+"profile_age" = "Age:";
+"profile_gender" = "Gender:";
+"profile_country" = "Country:";
+
+// MARK: JWTManager
+
+"jwt_secret" = "$SECRET$";
+"jwt_typ" = "JWT";
+"jwt_uid" = "1234";
+"jwt_identity" = "profile";
+
+// MARK: Error Alert
+
+"unexpected_error" = "Unexpected error occured.";
+"alert_button_ok" = "OK";
