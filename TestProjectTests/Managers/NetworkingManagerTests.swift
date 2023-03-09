@@ -8,15 +8,15 @@
 import XCTest
 @testable import TestProject
 
-class DataManagerTests: XCTestCase {
+class NetworkingManagerTests: XCTestCase {
     
     func testFetchData() {
         
-        let sut = DataManager<DataResults>()
+        let sut = NetworkingManager()
         let expectation = self.expectation(description: "fetchData() should return data and no error")
         
         let url = "https://opn-interview-service.nn.r.appspot.com/list"
-        sut.fetchData(url: url) { (data, error) in
+        sut.fetchData(url: url) { (data: DataResults?, error) in
             XCTAssertNotNil(data)
             XCTAssertNil(error)
             expectation.fulfill()
@@ -27,11 +27,11 @@ class DataManagerTests: XCTestCase {
     
     func testFetchDataWithInvalidURL() {
         
-        let sut = DataManager<DataResults>()
+        let sut = NetworkingManager()
         let expectation = self.expectation(description: "fetchData() should return error for invalid URL")
         
         let url = "invalidURL"
-        sut.fetchData(url: url) { (data, error) in
+        sut.fetchData(url: url) { (data: DataResults?, error) in
             XCTAssertNil(data)
             XCTAssertNotNil(error)
             expectation.fulfill()

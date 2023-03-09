@@ -12,19 +12,22 @@
 		6A3DC28E29B7EEAE0022ACF8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC28D29B7EEAE0022ACF8 /* ProfileView.swift */; };
 		6A3DC29029B7F0520022ACF8 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC28F29B7F0520022ACF8 /* DataModel.swift */; };
 		6A3DC29229B871EF0022ACF8 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC29129B871EF0022ACF8 /* Profile.swift */; };
-		6A3DC29529B8730F0022ACF8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6A3DC29429B8730F0022ACF8 /* Alamofire */; };
 		6A3DC29729B873C50022ACF8 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC29629B873C50022ACF8 /* ProfileManager.swift */; };
 		6A3DC29929B876740022ACF8 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC29829B876740022ACF8 /* ListViewModel.swift */; };
 		6A3DC29B29B8798C0022ACF8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC29A29B8798C0022ACF8 /* ProfileViewModel.swift */; };
 		6A3DC29E29B8FD400022ACF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A3DC29D29B8FD400022ACF8 /* Localizable.strings */; };
 		6A3DC2A129B8FD680022ACF8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC2A029B8FD680022ACF8 /* String.swift */; };
+		6A6CF6C629BA3B4F00A74E7F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6CF6C529BA3B4F00A74E7F /* Alamofire */; };
+		6A6CF6C929BA48D800A74E7F /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6CF6C829BA48D800A74E7F /* SwiftJWT */; };
+		6AB48D9029BA15DD002D2C87 /* NetworkingManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB48D8F29BA15DD002D2C87 /* NetworkingManagerProtocol.swift */; };
+		6AB48D9229BA17D7002D2C87 /* MockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB48D9129BA17D7002D2C87 /* MockNetworkingManager.swift */; };
+		6AB48D9429BA1918002D2C87 /* JWTManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB48D9329BA1918002D2C87 /* JWTManagerProtocol.swift */; };
 		6AC7642B29B78EC200ADDEA7 /* TestProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7642A29B78EC200ADDEA7 /* TestProjectApp.swift */; };
 		6AC7642D29B78EC200ADDEA7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7642C29B78EC200ADDEA7 /* ListView.swift */; };
 		6AC7642F29B78EC300ADDEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC7642E29B78EC300ADDEA7 /* Assets.xcassets */; };
 		6AC7643229B78EC300ADDEA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC7643129B78EC300ADDEA7 /* Preview Assets.xcassets */; };
-		6AC7643D29B791AC00ADDEA7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7643C29B791AC00ADDEA7 /* DataManager.swift */; };
-		6AC7644029B7934000ADDEA7 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC7643F29B7934000ADDEA7 /* SwiftJWT */; };
-		6ACA7CCD29B901AA008AF413 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA7CCC29B901AA008AF413 /* DataManagerTests.swift */; };
+		6AC7643D29B791AC00ADDEA7 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7643C29B791AC00ADDEA7 /* NetworkingManager.swift */; };
+		6ACA7CCD29B901AA008AF413 /* NetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA7CCC29B901AA008AF413 /* NetworkingManagerTests.swift */; };
 		6ACA7CDE29B90765008AF413 /* ProfileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA7CDD29B90765008AF413 /* ProfileManagerTests.swift */; };
 		6ACA7CE229B90818008AF413 /* MockProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA7CE129B90818008AF413 /* MockProfileManager.swift */; };
 		6ACA7CE529B9083F008AF413 /* ProfileManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA7CE429B9083F008AF413 /* ProfileManagerProtocol.swift */; };
@@ -54,14 +57,17 @@
 		6A3DC29A29B8798C0022ACF8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		6A3DC29D29B8FD400022ACF8 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6A3DC2A029B8FD680022ACF8 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		6AB48D8F29BA15DD002D2C87 /* NetworkingManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerProtocol.swift; sourceTree = "<group>"; };
+		6AB48D9129BA17D7002D2C87 /* MockNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingManager.swift; sourceTree = "<group>"; };
+		6AB48D9329BA1918002D2C87 /* JWTManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTManagerProtocol.swift; sourceTree = "<group>"; };
 		6AC7642729B78EC200ADDEA7 /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC7642A29B78EC200ADDEA7 /* TestProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectApp.swift; sourceTree = "<group>"; };
 		6AC7642C29B78EC200ADDEA7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		6AC7642E29B78EC300ADDEA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AC7643129B78EC300ADDEA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6AC7643C29B791AC00ADDEA7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6AC7643C29B791AC00ADDEA7 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		6ACA7CCA29B901AA008AF413 /* TestProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6ACA7CCC29B901AA008AF413 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		6ACA7CCC29B901AA008AF413 /* NetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerTests.swift; sourceTree = "<group>"; };
 		6ACA7CDD29B90765008AF413 /* ProfileManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManagerTests.swift; sourceTree = "<group>"; };
 		6ACA7CE129B90818008AF413 /* MockProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProfileManager.swift; sourceTree = "<group>"; };
 		6ACA7CE429B9083F008AF413 /* ProfileManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManagerProtocol.swift; sourceTree = "<group>"; };
@@ -75,8 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AC7644029B7934000ADDEA7 /* SwiftJWT in Frameworks */,
-				6A3DC29529B8730F0022ACF8 /* Alamofire in Frameworks */,
+				6A6CF6C929BA48D800A74E7F /* SwiftJWT in Frameworks */,
+				6A6CF6C629BA3B4F00A74E7F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				6A3DC29629B873C50022ACF8 /* ProfileManager.swift */,
-				6AC7643C29B791AC00ADDEA7 /* DataManager.swift */,
+				6AC7643C29B791AC00ADDEA7 /* NetworkingManager.swift */,
 				6A3DC28829B7ED5F0022ACF8 /* JWTManager.swift */,
 			);
 			path = Managers;
@@ -208,7 +214,7 @@
 		6ACA7CDF29B9078E008AF413 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				6ACA7CCC29B901AA008AF413 /* DataManagerTests.swift */,
+				6ACA7CCC29B901AA008AF413 /* NetworkingManagerTests.swift */,
 				6ACA7CDD29B90765008AF413 /* ProfileManagerTests.swift */,
 			);
 			path = Managers;
@@ -217,6 +223,7 @@
 		6ACA7CE029B9080D008AF413 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				6AB48D9129BA17D7002D2C87 /* MockNetworkingManager.swift */,
 				6ACA7CE129B90818008AF413 /* MockProfileManager.swift */,
 				6ACA7CE629B908A5008AF413 /* FailureError.swift */,
 			);
@@ -227,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				6ACA7CE429B9083F008AF413 /* ProfileManagerProtocol.swift */,
+				6AB48D8F29BA15DD002D2C87 /* NetworkingManagerProtocol.swift */,
+				6AB48D9329BA1918002D2C87 /* JWTManagerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -258,8 +267,8 @@
 			);
 			name = TestProject;
 			packageProductDependencies = (
-				6AC7643F29B7934000ADDEA7 /* SwiftJWT */,
-				6A3DC29429B8730F0022ACF8 /* Alamofire */,
+				6A6CF6C529BA3B4F00A74E7F /* Alamofire */,
+				6A6CF6C829BA48D800A74E7F /* SwiftJWT */,
 			);
 			productName = TestProject;
 			productReference = 6AC7642729B78EC200ADDEA7 /* TestProject.app */;
@@ -312,8 +321,8 @@
 			);
 			mainGroup = 6AC7641E29B78EC200ADDEA7;
 			packageReferences = (
-				6AC7643E29B7934000ADDEA7 /* XCRemoteSwiftPackageReference "Swift-JWT" */,
-				6A3DC29329B8730F0022ACF8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6A6CF6C429BA3B4F00A74E7F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6A6CF6C729BA48D800A74E7F /* XCRemoteSwiftPackageReference "Swift-JWT" */,
 			);
 			productRefGroup = 6AC7642829B78EC200ADDEA7 /* Products */;
 			projectDirPath = "";
@@ -377,10 +386,12 @@
 				6A3DC29229B871EF0022ACF8 /* Profile.swift in Sources */,
 				6A3DC29029B7F0520022ACF8 /* DataModel.swift in Sources */,
 				6A3DC28C29B7ED970022ACF8 /* CustomClaims.swift in Sources */,
-				6AC7643D29B791AC00ADDEA7 /* DataManager.swift in Sources */,
+				6AC7643D29B791AC00ADDEA7 /* NetworkingManager.swift in Sources */,
+				6AB48D9029BA15DD002D2C87 /* NetworkingManagerProtocol.swift in Sources */,
 				6A3DC2A129B8FD680022ACF8 /* String.swift in Sources */,
 				6AC7642B29B78EC200ADDEA7 /* TestProjectApp.swift in Sources */,
 				6A3DC29B29B8798C0022ACF8 /* ProfileViewModel.swift in Sources */,
+				6AB48D9429BA1918002D2C87 /* JWTManagerProtocol.swift in Sources */,
 				6A3DC28E29B7EEAE0022ACF8 /* ProfileView.swift in Sources */,
 				6A3DC29729B873C50022ACF8 /* ProfileManager.swift in Sources */,
 				6A3DC28929B7ED5F0022ACF8 /* JWTManager.swift in Sources */,
@@ -392,8 +403,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ACA7CE229B90818008AF413 /* MockProfileManager.swift in Sources */,
-				6ACA7CCD29B901AA008AF413 /* DataManagerTests.swift in Sources */,
+				6ACA7CCD29B901AA008AF413 /* NetworkingManagerTests.swift in Sources */,
 				6ACA7CDE29B90765008AF413 /* ProfileManagerTests.swift in Sources */,
+				6AB48D9229BA17D7002D2C87 /* MockNetworkingManager.swift in Sources */,
 				6ACA7CEA29B90904008AF413 /* ListViewModelTests.swift in Sources */,
 				6ACA7CEC29B90BD8008AF413 /* ProfileViewModelTests.swift in Sources */,
 				6ACA7CE729B908A5008AF413 /* FailureError.swift in Sources */,
@@ -652,33 +664,33 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6A3DC29329B8730F0022ACF8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		6A6CF6C429BA3B4F00A74E7F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6A6CF6C729BA48D800A74E7F /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/Swift-JWT";
 			requirement = {
 				branch = master;
 				kind = branch;
 			};
 		};
-		6AC7643E29B7934000ADDEA7 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Kitura/Swift-JWT";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6A3DC29429B8730F0022ACF8 /* Alamofire */ = {
+		6A6CF6C529BA3B4F00A74E7F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6A3DC29329B8730F0022ACF8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 6A6CF6C429BA3B4F00A74E7F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		6AC7643F29B7934000ADDEA7 /* SwiftJWT */ = {
+		6A6CF6C829BA48D800A74E7F /* SwiftJWT */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6AC7643E29B7934000ADDEA7 /* XCRemoteSwiftPackageReference "Swift-JWT" */;
+			package = 6A6CF6C729BA48D800A74E7F /* XCRemoteSwiftPackageReference "Swift-JWT" */;
 			productName = SwiftJWT;
 		};
 /* End XCSwiftPackageProductDependency section */

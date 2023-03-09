@@ -9,18 +9,18 @@ import Foundation
 
 class ProfileManager: ProfileManagerProtocol {
     
-    private let listManager = DataManager<DataResults>()
-    private let profileManager = DataManager<ProfileResults>()
-    
+    private let networkingManager: NetworkingManagerProtocol
     private let listUrl = "https://opn-interview-service.nn.r.appspot.com/list"
     
-    func fetchList(completion: @escaping (String?, Error?) -> Void) {
+    init(networkingManager: NetworkingManagerProtocol = NetworkingManager()) {
+        self.networkingManager = networkingManager
+    }
+    
+    func fetchList(completion: @escaping ([String]?, Error?) -> Void) {
         
-        listManager.fetchData(url: listUrl) { data, error in
+        networkingManager.fetchData(url: listUrl) { (data: DataResults?, error) in
             if let data = data {
-                for id in data.data {
-                    completion(id, nil)
-                }
+                completion(data.data, nil)
             } else {
                 completion(nil, error)
             }
@@ -30,7 +30,7 @@ class ProfileManager: ProfileManagerProtocol {
     func fetchProfile(id: String, completion: @escaping (ProfileResults?, Error?) -> Void) {
         
         let url = "https://opn-interview-service.nn.r.appspot.com/get/\(id)"
-        profileManager.fetchData(url: url) { profile, error in
+        networkingManager.fetchData(url: url) { (profile: ProfileResults?, error) in
             if let profile = profile {
                 completion(profile, nil)
             } else {

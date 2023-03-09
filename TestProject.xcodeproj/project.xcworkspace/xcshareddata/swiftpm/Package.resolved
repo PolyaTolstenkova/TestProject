@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire",
       "state" : {
-        "branch" : "master",
-        "revision" : "81a29729e7dbfe7b976723843d0280926587a532"
+        "revision" : "78424be314842833c04bc3bef5b72e85fff99204",
+        "version" : "5.6.4"
       }
     },
     {
@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Kitura/Swift-JWT",
       "state" : {
-        "revision" : "08e02ff214c41df49bdd189ff837d68ba11c437b",
-        "version" : "4.0.0"
+        "branch" : "master",
+        "revision" : "ec3954db9e4ed1f496c2cfd99627e5d8da7730b5"
       }
     },
     {

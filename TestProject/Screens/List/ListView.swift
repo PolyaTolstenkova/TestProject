@@ -15,6 +15,11 @@ struct ListView: View {
         NavigationView {
             if viewModel.isLoading {
                 ProgressView()
+            } else if viewModel.errorOccured {
+                Text("No data found")
+                    .font(.system(size: 30))
+                    .foregroundColor(.gray)
+                    .bold()
             } else {
                 List {
                     ForEach(viewModel.list, id: \.self) { profile in
@@ -23,6 +28,7 @@ struct ListView: View {
                         } label: {
                             Text(profile.firstName)
                         }
+
                     }
                 }
             }
@@ -30,7 +36,9 @@ struct ListView: View {
         .alert(isPresented: $viewModel.alertIsPresented) {
             Alert(
                 title: Text(viewModel.error?.localizedDescription ?? "unexpected_error".localized),
-                dismissButton: .default(Text("alert_button_ok".localized))
+                dismissButton: .default(Text("alert_button_try_again".localized)) {
+                    viewModel.retry()
+                }
             )
         }
     }

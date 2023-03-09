@@ -8,11 +8,11 @@
 import Foundation
 import Alamofire
 
-class DataManager<T: Decodable> {
+class NetworkingManager: NetworkingManagerProtocol {
 
-    private let jftManager = JWTManager()
+    private let jftManager: JWTManagerProtocol  = JWTManager()
 
-    func fetchData(
+    func fetchData<T: Decodable>(
         url: String,
         completion: @escaping (T?, Error?) -> Void
     ) {

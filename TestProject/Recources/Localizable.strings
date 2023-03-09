@@ -22,4 +22,4 @@
 // MARK: Error Alert
 
 "unexpected_error" = "Unexpected error occured.";
-"alert_button_ok" = "OK";
+"alert_button_try_again" = "Try again";

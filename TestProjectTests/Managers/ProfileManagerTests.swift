@@ -11,8 +11,11 @@ import XCTest
 class ProfileManagerTests: XCTestCase {
     
     func testFetchList() {
-        let sut = ProfileManager()
+        let mockNetworkingManager = MockNetworkingManager()
+        let sut = ProfileManager(networkingManager: MockNetworkingManager())
         let expectation = self.expectation(description: "fetchList() should return a non-empty list")
+        
+        mockNetworkingManager.data = Data()
         
         sut.fetchList { (id, error) in
             XCTAssertNotNil(id)
@@ -23,9 +26,28 @@ class ProfileManagerTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    func testFetchListFailure() {
+        let mockNetworkingManager = MockNetworkingManager()
+        let sut = ProfileManager(networkingManager: MockNetworkingManager())
+        let expectation = self.expectation(description: "fetchList() should return a non-empty list")
+        
+        mockNetworkingManager.error = FailureError(message: "Failed to get data")
+        
+        sut.fetchList { (id, error) in
+            XCTAssertNotNil(error)
+            XCTAssertNil(id)
+        }
+        
+        expectation.fulfill()
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
     func testFetchProfile() {
-        let sut = ProfileManager()
+        let mockNetworkingManager = MockNetworkingManager()
+        let sut = ProfileManager(networkingManager: MockNetworkingManager())
         let expectation = self.expectation(description: "fetchProfile() should return a profile object")
+        
+        mockNetworkingManager.data = Data()
         
         sut.fetchProfile(id: "1") { (profile, error) in
             XCTAssertNotNil(profile)
@@ -37,8 +59,11 @@ class ProfileManagerTests: XCTestCase {
     }
     
     func testFetchProfileWithInvalidID() {
-        let sut = ProfileManager()
+        let mockNetworkingManager = MockNetworkingManager()
+        let sut = ProfileManager(networkingManager: MockNetworkingManager())
         let expectation = self.expectation(description: "fetchProfile() should return an error for an invalid ID")
+        
+        mockNetworkingManager.error = FailureError(message: "Invalid ID")
         
         sut.fetchProfile(id: "") { (profile, error) in
             XCTAssertNil(profile)

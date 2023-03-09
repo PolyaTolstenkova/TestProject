@@ -9,6 +9,6 @@ import Foundation
 
 protocol ProfileManagerProtocol {
     
-    func fetchList(completion: @escaping (String?, Error?) -> Void)
+    func fetchList(completion: @escaping ([String]?, Error?) -> Void)
     func fetchProfile(id: String, completion: @escaping (ProfileResults?, Error?) -> Void)
 }

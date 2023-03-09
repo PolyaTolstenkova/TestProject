@@ -8,7 +8,7 @@
 import Foundation
 import SwiftJWT
 
-class JWTManager {
+class JWTManager: JWTManagerProtocol {
     
    private func generateJWTSecretKey() -> Data {
        let secret = "jwt_secret".localized

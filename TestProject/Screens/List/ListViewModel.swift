@@ -12,6 +12,7 @@ class ListViewModel: ObservableObject {
     @Published var list: [Profile] = []
     @Published var isLoading: Bool = true
     @Published var error: Error?
+    @Published var errorOccured: Bool = false
     @Published var alertIsPresented: Bool = false
     
     private let profileManager: ProfileManagerProtocol
@@ -22,12 +23,18 @@ class ListViewModel: ObservableObject {
     }
     
     func fetchList() {
-        profileManager.fetchList { [weak self] id, error in
+        profileManager.fetchList { [weak self] idList, error in
             if let error = error {
                 self?.error = error
                 self?.alertIsPresented = true
+                self?.isLoading = false
             } else {
-                self?.fetchProfile(id: id)
+                self?.errorOccured = false
+                if let idList = idList {
+                    for id in idList {
+                        self?.fetchProfile(id: id)
+                    }
+                }
             }
         }
     }
@@ -43,7 +50,9 @@ class ListViewModel: ObservableObject {
                 if let error = error {
                     self?.error = error
                     self?.alertIsPresented = true
+                    self?.isLoading = false
                 } else if let profile = profile {
+                    self?.errorOccured = false
                     self?.list.append(
                         Profile(
                             id: profile.data.id,
@@ -57,5 +66,15 @@ class ListViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func retry() {
+        list = []
+        error = nil
+        alertIsPresented = true
+        isLoading = true
+        errorOccured = true
+        
+        fetchList()
     }
 }
